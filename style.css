@@ -1,0 +1,264 @@
+:root {
+    background-color: black;
+    color: white;
+    font-family: "Caveat";
+    text-align: center;
+    scroll-behavior: smooth;
+
+}
+
+.Header {
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.Header-gif{
+    width: 5%;}
+
+.Header-btn {
+    display: none;
+    background-color: black;
+    border: none;
+}
+
+.Logo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    padding: 1rem;
+    height: 40%;
+    margin-top: 5rem;
+}
+
+.Container-h2 {
+    margin-top: 3rem;
+}
+
+.Container-p,
+.Logo {
+    background-color: rgba(0, 0, 0, 0.250);
+    border-radius: 15px;
+}
+
+.Logo-img {
+    width: 100px;
+    border-radius: 50%;
+
+}
+
+.Lista {
+    display: flex;
+    list-style: none;
+    align-items: center;
+}
+
+.Lista--a {
+    text-decoration: none;
+    border-radius: 15px;
+    color: white;
+    margin-left: 1rem;
+}
+
+.Container {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.Container-img {
+    width: 100%;
+    margin-top: 1rem;
+    border-radius: 15px;
+}
+
+
+
+.Container-article {
+    display: flex;
+    flex-direction: column;
+}
+
+.Videos {
+    justify-content: center;
+    align-items: center;
+}
+
+.Videos-iframe {
+    margin: 1rem;
+    border-radius: 10px;
+
+}
+
+#Seccion-1 {
+    background-image: url();
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom center;
+    background-attachment: fixed;
+}
+
+
+#Seccion-1,
+#Seccion-2,
+#Seccion-3,
+#Seccion-4,
+#Seccion-5,
+#Seccion-6,
+#Seccion-7,
+#Seccion-8 {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom center;
+    background-attachment: fixed;
+}
+
+#Seccion-1,
+#Seccion-2 {
+    background-image: url(https://wallpaper.forfun.com/fetch/8b/8b9bdd8a256923cce59de1736c1f8041.jpeg);
+}
+
+#Seccion-3,
+#Seccion-4 {
+    background-image: url(https://wallpapercave.com/wp/wp2967545.jpg);
+}
+
+#Seccion-5,
+#Seccion-6 {
+    background-image: url(https://djschool.org//wp-content/uploads/2021/09/dj-pro-.jpg);
+}
+
+#Seccion-7,
+#Seccion-8 {
+    background-image: url(https://i.pinimg.com/originals/4e/6b/3d/4e6b3d47b84700a5745194f9577aa65c.jpg);
+}
+
+.Container-Galeria {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.5rem;
+    padding: 1rem;
+
+}
+
+.Container-Galeria img {
+    width: 100%;
+    border-radius: 15px;
+    height: 90%;
+}
+
+
+.Footer-redes--a {
+    text-decoration: none;
+    margin-left: 1rem;
+    color: white;
+}
+
+
+.Form-group {
+    font-weight: 400;
+    font-size: 16px;
+}
+
+.fa-x-twitter,
+.fa-tiktok {
+    color: gray;
+}
+
+
+.fa-instagram {
+    color: darkmagenta;
+}
+
+.fa-bars {
+    background-color: black;
+    color: white;
+}
+
+.fa-youtube {
+    color: red;
+}
+
+.Footer{
+    margin: 1rem;
+}
+
+/*Mobile*/
+@media only screen and (max-width: 700px) {
+    .Header-logo {
+        display: none;
+    }
+
+    .Lista {
+        display: none;
+    }
+
+    .Header-btn {
+        display: block;
+    }
+
+    .Container {
+        height: vh;
+    }
+    .Header-gif{
+        display: none;
+    }
+
+}
+
+.fa-envelope {
+    color: rgb(255, 255, 255);
+}
+
+/*Tablet*/
+@media only screen and (min-width: 701px) and (max-width:1200px) {
+    :Root {
+        font-size: 1.8rem;
+    }
+
+    .Container-h1 {
+        font-size: 1.5rem;
+    }
+
+    .Container-p {
+        width: 70%;
+    }
+
+    .Lista--a {
+        font-size: 0.8rem;
+    }
+}
+
+/*Pc*/
+@media only screen and (min-width: 1201px) {
+    :Root {
+        font-size: 2rem;
+    }
+
+
+    .Header img {
+        width: 100px;
+        border-radius: 50%;
+    }
+
+    .Container-h1 {
+        font-size: 2.5rem;
+    }
+
+    .Container-p {
+        width: 50%;
+    }
+
+    .Videos-iframe {
+        width: 60vh;
+        height: 40vh;
+    }
+
+
+}

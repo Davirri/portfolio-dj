@@ -1,22 +1,28 @@
 :root {
     background-color: black;
     color: white;
-    font-family: "Caveat";
+    font-family: "Caveat", cursive;
     text-align: center;
     scroll-behavior: smooth;
 
 }
 
 .Header {
-    background-size: cover;
-    background-repeat: no-repeat;
+
+    position: fixed;
     display: flex;
     justify-content: center;
     align-items: center;
-
+    background-color: black;
+    width: 100%;
+    top: 0;
+    z-index: 1;
+    padding: 0.5rem;
 }
-.Header-gif{
-    width: 5%;}
+
+.Header-gif {
+    width: 5%;
+}
 
 .Header-btn {
     display: none;
@@ -29,39 +35,75 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-
-    padding: 1rem;
     height: 40%;
-    margin-top: 5rem;
+    margin-top: 6rem
+}
+
+.Logo-h1 {
+    color: cyan;
+    font-family: "Reggae One", system-ui;
+    animation: glow 1s ease-in-out infinite alternate;
+}
+
+@keyframes glow {
+    0% {
+
+        text-shadow: 0 0 20px cyan;
+    }
+
+    100% {
+        scale: 1.2;
+        text-shadow: 0 0 50px cyan, 0 0 20px black;
+    }
 }
 
 .Container-h2 {
     margin-top: 3rem;
+    color: aquamarine;
+    text-shadow: 0 0 20px aquamarine;
+}
+
+.Container-h3 {
+    color: orange;
+    text-shadow: 0 0 20px orange;
 }
 
 .Container-p,
-.Logo {
+.Logo,
+.Container-form {
     background-color: rgba(0, 0, 0, 0.250);
     border-radius: 15px;
+    padding: 1rem;
 }
 
 .Logo-img {
     width: 100px;
     border-radius: 50%;
-
+    box-shadow: 0 0 50px cyan;
 }
 
 .Lista {
     display: flex;
     list-style: none;
+    justify-content: center;
     align-items: center;
 }
 
 .Lista--a {
     text-decoration: none;
     border-radius: 15px;
-    color: white;
+    color: rgb(255, 0, 255);
     margin-left: 1rem;
+    padding: 0.2rem;
+    text-shadow: 0 0 50px rgb(255, 0, 255);
+
+}
+
+.Lista--a:hover {
+    background-color: white;
+    color: black;
+    transition: 1s ease;
+
 }
 
 .Container {
@@ -83,6 +125,12 @@
 .Container-article {
     display: flex;
     flex-direction: column;
+}
+
+.Container-form {
+    display: grid;
+    grid-template-rows: 3, 1fr;
+    gap: 0.5rem;
 }
 
 .Videos {
@@ -154,6 +202,7 @@
 }
 
 
+.Container-redes--a,
 .Footer-redes--a {
     text-decoration: none;
     margin-left: 1rem;
@@ -179,20 +228,26 @@
 .fa-bars {
     background-color: black;
     color: white;
+
 }
 
 .fa-youtube {
     color: red;
 }
 
-.Footer{
+.Footer {
     margin: 1rem;
 }
+
 
 /*Mobile*/
 @media only screen and (max-width: 700px) {
     .Header-logo {
         display: none;
+    }
+
+    .Header {
+        height: 7%;
     }
 
     .Lista {
@@ -203,11 +258,13 @@
         display: block;
     }
 
-    .Container {
-        height: vh;
-    }
-    .Header-gif{
+
+    .Header-gif {
         display: none;
+    }
+
+    .Container-p {
+        width: 90%;
     }
 
 }

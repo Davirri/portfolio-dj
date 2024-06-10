@@ -26,6 +26,18 @@
     display: none;
     background-color: black;
     border: none;
+    cursor: pointer;
+}
+.Header-x {
+    display: none;
+    background-color: black;
+    color: white;
+    border: none;
+    cursor: pointer;
+    position: absolute;
+    top: 2rem;
+    right: 3rem;
+    font-size: x-large;
 }
 
 .Logo {
@@ -90,10 +102,9 @@
 .Lista--a {
     text-decoration: none;
     border-radius: 15px;
-    color: rgb(255, 0, 255);
-    margin-left: 1rem;
+    color: white;
+    margin-left: 10px;
     padding: 0.2rem;
-    text-shadow: 0 0 50px rgb(255, 0, 255);
 
 }
 
@@ -109,7 +120,7 @@
     width: 100%;
     flex-direction: column;
     align-items: center;
-    
+
 
 }
 
@@ -234,6 +245,10 @@
     color: red;
 }
 
+.fa-envelope {
+    color: white;
+}
+
 .Footer {
     margin: 1rem;
 }
@@ -248,7 +263,8 @@
     background-color: rgba(0, 0, 0, 0.692);
     z-index: 3;
 }
-.Full-x{
+
+.Full-x {
     position: absolute;
     right: 0;
     top: 0;
@@ -268,16 +284,14 @@
     top: 50%;
     margin-left: 1rem;
 }
-.Full-img{
+
+.Full-img {
     height: 100vh;
 }
 
 
 /*Mobile*/
 @media only screen and (max-width: 700px) {
-    .Header-logo {
-        display: none;
-    }
 
     .Header {
         height: 7%;
@@ -287,6 +301,26 @@
         display: none;
     }
 
+    .Lista.active {
+        background-color: rgba(0, 0, 0, 0.692);
+        width: 100%;
+        height: 100vh;
+        position: absolute;
+        top: 0;
+        display: flex;
+        flex-direction: column;
+        list-style: none;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .Lista--a {
+        margin-right: 4rem;
+        font-size: xx-large;
+        color: white;
+    }
+
+
     .Header-btn {
         display: block;
     }
@@ -294,12 +328,11 @@
     .Container-p {
         width: 90%;
     }
-
+    .Header-x.active{
+        display: block;
+    }
 }
 
-.fa-envelope {
-    color: rgb(255, 255, 255);
-}
 
 /*Tablet*/
 @media only screen and (min-width: 701px) and (max-width:1200px) {
@@ -316,7 +349,7 @@
     }
 
     .Lista--a {
-        font-size: 0.6rem;
+        font-size: 0.7rem;
     }
 }
 

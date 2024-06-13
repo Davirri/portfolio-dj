@@ -28,6 +28,7 @@
     border: none;
     cursor: pointer;
 }
+
 .Header-x {
     display: none;
     background-color: black;
@@ -62,7 +63,7 @@
     }
 
     100% {
-        scale: 1.2;
+        transform: scale(1.2);
         text-shadow: 0 0 50px cyan, 0 0 20px black;
     }
 }
@@ -139,8 +140,9 @@
 
 .Container-form {
     display: grid;
-    grid-template-rows: 3, 1fr;
+    grid-template-rows:repeat(3, 1fr) ;
     gap: 0.5rem;
+    margin: 1rem;
 }
 
 .Videos {
@@ -200,17 +202,71 @@
 .Galeria {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 0.5rem;
-    padding: 1rem;
-
+    gap: 20px;
+    padding: 0.5rem;
 }
 
 .Galeria-img {
     width: 100%;
     border-radius: 15px;
-    height: 90%;
+    cursor: pointer;
+    height: 100%;
+
 }
 
+.Full {
+    display: none;
+    position: fixed;
+    top: 0;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.692);
+    z-index: 3;
+}
+
+.Full-x {
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding: 1rem;
+    cursor: pointer;
+}
+
+.Full-btnPrev {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    margin-right: 1rem;
+}
+
+.Full-btnNext {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    margin-left: 1rem;
+}
+
+.Full-img {
+    width: 50%;
+    border-radius: 15px;
+}
+
+.Label-mensaje,
+.Label-correo {
+    border-radius: 15px;
+    margin-top: 5px;
+}
+
+.Label-btn {
+    padding: 0.2rem;
+    border-radius: 15px;
+    width: 50%;
+    color: white;
+    background-color: rgb(89, 0, 255);
+    border: none;
+}
 
 .Container-redes--a,
 .Footer-redes--a {
@@ -218,7 +274,6 @@
     margin-left: 1rem;
     color: white;
 }
-
 
 .Form-group {
     font-weight: 400;
@@ -253,41 +308,6 @@
     margin: 1rem;
 }
 
-.Full {
-    position: absolute;
-    align-items: center;
-    display: none;
-    justify-content: center;
-    width: 100%;
-    height: 100vh;
-    background-color: rgba(0, 0, 0, 0.692);
-    z-index: 3;
-}
-
-.Full-x {
-    position: absolute;
-    right: 0;
-    top: 0;
-    margin-right: 1rem;
-}
-
-.Full-btnPrev {
-    position: absolute;
-    right: 0;
-    top: 50%;
-    margin-right: 1rem;
-}
-
-.Full-btnNext {
-    position: absolute;
-    left: 0;
-    top: 50%;
-    margin-left: 1rem;
-}
-
-.Full-img {
-    height: 100vh;
-}
 
 
 /*Mobile*/
@@ -328,8 +348,12 @@
     .Container-p {
         width: 90%;
     }
-    .Header-x.active{
+
+    .Header-x.active {
         display: block;
+    }
+    .Full-x{
+        top: 13rem;
     }
 }
 

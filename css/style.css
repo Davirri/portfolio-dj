@@ -11,15 +11,22 @@
 
     position: fixed;
     display: flex;
+    text-align: center;
     justify-content: center;
-    align-items: center;
     background-color: black;
-    width: 100%;
+    width: 98%;
     top: 0;
     z-index: 1;
     padding: 0.5rem;
 }
 
+.Redes-x,
+.Redes-i,
+.Redes-y,
+.Redes-e,
+.Redes-t {
+    margin: 0.5rem;
+}
 
 
 .Header-btn {
@@ -69,9 +76,10 @@
 }
 
 .Container-h2 {
-    margin-top: 3rem;
+    padding: 3rem;
     color: aquamarine;
     text-shadow: 0 0 20px aquamarine;
+
 }
 
 .Container-h3 {
@@ -87,6 +95,44 @@
     padding: 1rem;
 }
 
+
+
+.Container-mas,
+.Container-menos.active {
+    display: block;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    bottom: 0.5rem;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    font-size: xx-large;
+    cursor: pointer;
+    box-shadow: 0 0 20px aquamarine;
+
+}
+
+.Container-mas:hover,
+.Container-menos.active:hover {
+    transform: scale(1.2);
+}
+
+.Container-menos {
+    display: none;
+}
+
+.Container-menos.active {
+    position: absolute;
+    top: 8.2rem;
+}
+
+.Container-mas.active {
+    display: none;
+}
+
+
+
 .Logo-img {
     width: 100px;
     border-radius: 50%;
@@ -96,11 +142,10 @@
 .Lista {
     display: flex;
     list-style: none;
-    justify-content: center;
-    align-items: center;
+
 }
 
-.Lista--a {
+.Lista-a {
     text-decoration: none;
     border-radius: 15px;
     color: white;
@@ -109,7 +154,7 @@
 
 }
 
-.Lista--a:hover {
+.Lista-a:hover {
     background-color: white;
     color: black;
     transition: 1s ease;
@@ -121,7 +166,7 @@
     width: 100%;
     flex-direction: column;
     align-items: center;
-
+    position: relative;
 
 }
 
@@ -138,30 +183,7 @@
     flex-direction: column;
 }
 
-.Container-form {
-    display: flex;
-    flex-direction: column;
-    margin: 1rem;
-}
 
-.Videos {
-    justify-content: center;
-    align-items: center;
-}
-
-.Videos-iframe {
-    margin: 1rem;
-    border-radius: 10px;
-
-}
-
-#Seccion-1 {
-    background-image: url();
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: bottom center;
-    background-attachment: fixed;
-}
 
 
 #Seccion-1,
@@ -180,27 +202,31 @@
 
 #Seccion-1,
 #Seccion-2 {
-    background-image: url(https://wallpaper.forfun.com/fetch/8b/8b9bdd8a256923cce59de1736c1f8041.jpeg);
+    background-image: url(https://images.pexels.com/photos/4062563/pexels-photo-4062563.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
 }
 
 #Seccion-3,
 #Seccion-4 {
-    background-image: url(https://wallpapercave.com/wp/wp2967545.jpg);
+    background-image: url(https://images.pexels.com/photos/3596460/pexels-photo-3596460.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
 }
 
 #Seccion-5,
 #Seccion-6 {
-    background-image: url(https://djschool.org//wp-content/uploads/2021/09/dj-pro-.jpg);
+    background-image: url(https://images.pexels.com/photos/2111015/pexels-photo-2111015.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
 }
 
 #Seccion-7,
 #Seccion-8 {
-    background-image: url(https://i.pinimg.com/originals/4e/6b/3d/4e6b3d47b84700a5745194f9577aa65c.jpg);
+    background-image: url(https://images.pexels.com/photos/11816397/pexels-photo-11816397.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
 }
 
 .Galeria {
+    display: none;
+}
+
+.Galeria.active {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     gap: 20px;
     padding: 0.5rem;
 }
@@ -210,8 +236,12 @@
     border-radius: 15px;
     cursor: pointer;
     height: 100%;
-
 }
+
+.Galeria-img:hover {
+    transform: scale(0.9);
+}
+
 
 .Full {
     display: none;
@@ -233,57 +263,83 @@
     cursor: pointer;
 }
 
-.Full-btnPrev {
+.Full-btnPrev,
+.Full-btnNext {
     position: absolute;
-    right: 0;
     top: 50%;
+    background-color: rgba(0, 0, 0, 0.250);
+    color: white;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    border: none;
+}
+.Full-btnPrev:hover,
+.Full-btnNext:hover {
+    animation: glow 0.5s alternate infinite;
+    box-shadow: 0 0 50px aqua;
+}
+
+.Full-btnPrev {
     margin-right: 1rem;
+    left: 1rem;
 }
 
 .Full-btnNext {
-    position: absolute;
-    left: 0;
-    top: 50%;
     margin-left: 1rem;
+    right: 1rem;
 }
 
 .Full-img {
     width: 50%;
     border-radius: 15px;
 }
+
+.Container-form {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 5rem;
+    width: 30%;
+}
+
+.Container-gifright,
+.Container-gifleft {
+    position: absolute;
+    width: 15%;
+    bottom: 0;
+}
+
+.Container-gifright {
+    right: 5%;
+    top: 0;
+}
+
+.Container-gifleft {
+    left: 5%;
+}
+
 .Label-correo,
-.Label-mensaje,
-.Label-correo {
+.Label-correo,.Label-texto {
     border-radius: 15px;
     margin-top: 20px;
     width: 90%;
+    
 }
 
 .Label-btn {
     padding: 0.2rem;
     border-radius: 15px;
-    width: 50%;
+    width: 60%;
     color: white;
-    background-color: rgb(89, 0, 255);
+    background-color: rgb(0, 0, 255);
     border: none;
     margin-top: 20px;
 }
 
-.Container-redes--a,
-.Footer-redes--a {
-    text-decoration: none;
-    margin-left: 1rem;
-    color: white;
-}
-
-.Form-group {
-    font-weight: 400;
-    font-size: 16px;
-}
 
 .fa-x-twitter,
 .fa-tiktok {
-    color: gray;
+    color: silver;
 }
 
 
@@ -316,6 +372,7 @@
 
     .Header {
         height: 7%;
+        width: 95%;
     }
 
     .Lista {
@@ -335,7 +392,7 @@
         align-items: center;
     }
 
-    .Lista--a {
+    .Lista-a {
         margin-right: 4rem;
         font-size: xx-large;
         color: white;
@@ -353,8 +410,20 @@
     .Header-x.active {
         display: block;
     }
-    .Full-x{
+
+    .Full-x {
         top: 13rem;
+    }
+
+    .Container-menos.active {
+        display: block;
+        position: absolute;
+        top: 6.8rem;
+    }
+
+    .Container-gifright,
+    .Container-gifleft {
+        width: 20%;
     }
 }
 
@@ -363,6 +432,11 @@
 @media only screen and (min-width: 701px) and (max-width:1200px) {
     :Root {
         font-size: 1.8rem;
+    }
+
+    .Header {
+        height: 7%;
+        width: 96%;
     }
 
     .Container-h1 {

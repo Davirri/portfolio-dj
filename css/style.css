@@ -1,53 +1,101 @@
+/*------Css Principal------*/
 :root {
     background-color: black;
     color: white;
     font-family: "Caveat", cursive;
     text-align: center;
     scroll-behavior: smooth;
-
+    font-size: 2.2rem;
 }
 
-.Header {
+.Containerprimero,
+.Containersegundo,
+.Containertercero,
+.Containercuarto,
+.Containerquinto,
+.Containersexto,
+.Containerseptimo,
+.Containeroctavo {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom center;
+    background-attachment: fixed;
+}
 
+/* ------Colores y efectos de textos------*/
+.Container-h2 {
+    padding: 3rem;
+    color: aquamarine;
+    text-shadow: 0 0 20px aquamarine;
+}
+
+.Container-h3 {
+    color: orange;
+    text-shadow: 0 0 20px orange;
+}
+
+/*------Header y menu------*/
+.Header {
     position: fixed;
     display: flex;
-    text-align: center;
     justify-content: center;
     background-color: black;
-    width: 98%;
+    width: 100%;
     top: 0;
     z-index: 1;
-    padding: 0.5rem;
 }
 
-.Redes-x,
-.Redes-i,
-.Redes-y,
-.Redes-e,
-.Redes-t {
-    margin: 0.5rem;
+.Lista {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
 }
 
+.Lista-a {
+    text-decoration: none;
+    border-radius: 15px;
+    margin-right: 0.5rem;
+    padding: 0.2rem;
+}
 
+.Lista-a:hover {
+    background-color: white;
+    color: black;
+    transition: 1s ease;
+}
+
+/* ------Botones usados para el menu hamburguesa------ */
 .Header-btn {
-    display: none;
-    background-color: black;
-    border: none;
-    cursor: pointer;
-}
-
-.Header-x {
-    display: none;
     background-color: black;
     color: white;
+}
+
+.Header-btn,
+.Header-x {
+    display: none;
     border: none;
     cursor: pointer;
+}
+
+.Header-x,
+.Lista-a {
+    color: white;
+    background-color: rgba(0, 0, 0, 0);
+}
+
+
+.Header-x {
     position: absolute;
     top: 2rem;
     right: 3rem;
-    font-size: x-large;
 }
 
+/* ------Logo principal con sus redes y efectos------ */
 .Logo {
     display: flex;
     flex-direction: column;
@@ -75,18 +123,15 @@
     }
 }
 
-.Container-h2 {
-    padding: 3rem;
-    color: aquamarine;
-    text-shadow: 0 0 20px aquamarine;
-
+.Redes-f,
+.Redes-i,
+.Redes-y,
+.Redes-e,
+.Redes-t {
+    margin: 0.5rem;
 }
 
-.Container-h3 {
-    color: orange;
-    text-shadow: 0 0 20px orange;
-}
-
+/* ------Fondos transparentes de varias cajas------*/
 .Container-p,
 .Logo,
 .Container-form {
@@ -95,8 +140,27 @@
     padding: 1rem;
 }
 
+/* ------Css imagenes------*/
+.Enlaces-img {
+    border-radius: 50%;
+    width: 100px;
+    box-shadow: 0 0 50px orange;
+}
 
+.Logo-img {
+    width: 100px;
+    border-radius: 50%;
+    box-shadow: 0 0 50px cyan;
+}
 
+.Galeria-img {
+    width: 100%;
+    border-radius: 15px;
+    cursor: pointer;
+    height: 100%;
+}
+
+/* ------Botones y efectos de la galeria acordeon------ */
 .Container-mas,
 .Container-menos.active {
     display: block;
@@ -110,117 +174,20 @@
     font-size: xx-large;
     cursor: pointer;
     box-shadow: 0 0 20px aquamarine;
-
+    border: none;
 }
 
-.Container-mas:hover,
-.Container-menos.active:hover {
-    transform: scale(1.2);
-}
 
-.Container-menos {
-    display: none;
-}
+
 
 .Container-menos.active {
     position: absolute;
     top: 8.2rem;
 }
 
+.Galeria,
+.Container-menos,
 .Container-mas.active {
-    display: none;
-}
-
-
-
-.Logo-img {
-    width: 100px;
-    border-radius: 50%;
-    box-shadow: 0 0 50px cyan;
-}
-
-.Lista {
-    display: flex;
-    list-style: none;
-
-}
-
-.Lista-a {
-    text-decoration: none;
-    border-radius: 15px;
-    color: white;
-    margin-left: 10px;
-    padding: 0.2rem;
-
-}
-
-.Lista-a:hover {
-    background-color: white;
-    color: black;
-    transition: 1s ease;
-
-}
-
-.Container {
-    display: flex;
-    width: 100%;
-    flex-direction: column;
-    align-items: center;
-    position: relative;
-
-}
-
-.Container-img {
-    width: 100%;
-    margin-top: 1rem;
-    border-radius: 15px;
-}
-
-
-
-.Container-article {
-    display: flex;
-    flex-direction: column;
-}
-
-
-
-
-#Seccion-1,
-#Seccion-2,
-#Seccion-3,
-#Seccion-4,
-#Seccion-5,
-#Seccion-6,
-#Seccion-7,
-#Seccion-8 {
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: bottom center;
-    background-attachment: fixed;
-}
-
-#Seccion-1,
-#Seccion-2 {
-    background-image: url(https://images.pexels.com/photos/4062563/pexels-photo-4062563.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
-}
-
-#Seccion-3,
-#Seccion-4 {
-    background-image: url(https://images.pexels.com/photos/3596460/pexels-photo-3596460.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
-}
-
-#Seccion-5,
-#Seccion-6 {
-    background-image: url(https://images.pexels.com/photos/2111015/pexels-photo-2111015.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
-}
-
-#Seccion-7,
-#Seccion-8 {
-    background-image: url(https://images.pexels.com/photos/11816397/pexels-photo-11816397.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
-}
-
-.Galeria {
     display: none;
 }
 
@@ -231,18 +198,39 @@
     padding: 0.5rem;
 }
 
-.Galeria-img {
-    width: 100%;
-    border-radius: 15px;
-    cursor: pointer;
-    height: 100%;
+/* ------Efectos hover------ */
+
+.Enlaces-img:hover {
+    transform: scale(1.2);
 }
 
 .Galeria-img:hover {
     transform: scale(0.9);
 }
 
+/*------Backgrounds y efecto parallax------*/
 
+.Containerprimero,
+.Containersegundo {
+    background-image: url(https://images.pexels.com/photos/4062563/pexels-photo-4062563.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
+}
+
+.Containertercero,
+.Containercuarto {
+    background-image: url(https://images.pexels.com/photos/3596460/pexels-photo-3596460.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
+}
+
+.Containerquinto,
+.Containersexto {
+    background-image: url(https://images.pexels.com/photos/2111015/pexels-photo-2111015.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
+}
+
+.Containerseptimo,
+.Containeroctavo {
+    background-image: url(https://images.pexels.com/photos/11816397/pexels-photo-11816397.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
+}
+
+/* ------Galeria full size y botones adjuntos------ */
 .Full {
     display: none;
     position: fixed;
@@ -253,6 +241,11 @@
     height: 100%;
     background-color: rgba(0, 0, 0, 0.692);
     z-index: 3;
+}
+
+.Full-img {
+    width: 50%;
+    border-radius: 15px;
 }
 
 .Full-x {
@@ -274,6 +267,7 @@
     height: 50px;
     border: none;
 }
+
 .Full-btnPrev:hover,
 .Full-btnNext:hover {
     animation: glow 0.5s alternate infinite;
@@ -290,17 +284,38 @@
     right: 1rem;
 }
 
-.Full-img {
-    width: 50%;
-    border-radius: 15px;
-}
 
+
+/* Css formulario */
 .Container-form {
     display: flex;
     flex-direction: column;
     margin-bottom: 5rem;
-    width: 30%;
+    width: 15%;
 }
+
+.Label-correo,
+.Label-texto {
+    border-radius: 15px;
+    margin-top: 20px;
+    width: 80%;
+
+}
+
+
+.Label-btn {
+    padding: 0.2rem;
+    border-radius: 15px;
+    width: 60%;
+    color: white;
+    background-color: blue;
+    border: solid 2px black;
+    margin-top: 20px;
+    animation: glow 2s ease alternate infinite;
+    cursor: pointer;
+}
+
+/* Gifs parte de contactos */
 
 .Container-gifright,
 .Container-gifleft {
@@ -318,26 +333,14 @@
     left: 5%;
 }
 
-.Label-correo,
-.Label-correo,.Label-texto {
-    border-radius: 15px;
-    margin-top: 20px;
-    width: 90%;
-    
+
+
+
+/* ------Colores redes------ */
+.fa-facebook-f {
+    color: blue;
 }
 
-.Label-btn {
-    padding: 0.2rem;
-    border-radius: 15px;
-    width: 60%;
-    color: white;
-    background-color: rgb(0, 0, 255);
-    border: none;
-    margin-top: 20px;
-}
-
-
-.fa-x-twitter,
 .fa-tiktok {
     color: silver;
 }
@@ -345,12 +348,6 @@
 
 .fa-instagram {
     color: darkmagenta;
-}
-
-.fa-bars {
-    background-color: black;
-    color: white;
-
 }
 
 .fa-youtube {
@@ -366,13 +363,12 @@
 }
 
 
-
+/* ------Media queries------ */
 /*Mobile*/
 @media only screen and (max-width: 700px) {
 
-    .Header {
-        height: 7%;
-        width: 95%;
+    :root {
+        font-size: 1rem;
     }
 
     .Lista {
@@ -389,18 +385,22 @@
         flex-direction: column;
         list-style: none;
         justify-content: center;
-        align-items: center;
     }
 
     .Lista-a {
         margin-right: 4rem;
+    }
+
+    .Lista-a,
+    .Header-x {
         font-size: xx-large;
-        color: white;
     }
 
 
     .Header-btn {
         display: block;
+        padding: 1rem;
+
     }
 
     .Container-p {
@@ -421,25 +421,24 @@
         top: 6.8rem;
     }
 
+    .Container-form {
+        width: 50%;
+    }
+
     .Container-gifright,
     .Container-gifleft {
         width: 20%;
+    }
+
+    .Enlaces-img {
+        width: 50px;
     }
 }
 
 
 /*Tablet*/
-@media only screen and (min-width: 701px) and (max-width:1200px) {
-    :Root {
-        font-size: 1.8rem;
-    }
-
-    .Header {
-        height: 7%;
-        width: 96%;
-    }
-
-    .Container-h1 {
+@media only screen and (min-width: 701px) and (max-width:1024px) {
+    :root {
         font-size: 1.5rem;
     }
 
@@ -447,16 +446,14 @@
         width: 70%;
     }
 
-    .Lista--a {
-        font-size: 0.7rem;
+    .Container-form {
+        width: 30%;
     }
+
 }
 
 /*Pc*/
-@media only screen and (min-width: 1201px) {
-    :Root {
-        font-size: 2rem;
-    }
+@media only screen and (min-width: 1025px) {
 
 
     .Header img {
@@ -471,11 +468,5 @@
     .Container-p {
         width: 50%;
     }
-
-    .Videos-iframe {
-        width: 60vh;
-        height: 40vh;
-    }
-
 
 }

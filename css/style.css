@@ -570,7 +570,6 @@ Galeria full size y botones adjuntos
 .Full-btnPrev:hover,
 .Full-btnNext:hover {
     animation: glow 0.5s alternate infinite;
-    box-shadow: 0 0 50px aqua;
 }
 
 .Full-btnPrev {
@@ -678,7 +677,6 @@ Media queries
     :root {
         font-size: 1rem;
     }
-
     .Box {
         width: 80%;
     }
@@ -689,7 +687,7 @@ Media queries
     }
 
     .Guitarra {
-        top: 50%;
+        top: 40%;
         left: 5%;
     }
 

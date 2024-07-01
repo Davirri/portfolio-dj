@@ -1,4 +1,6 @@
-/*------Css Principal------*/
+/*-----------
+Css Principal
+------------*/
 :root {
     background-color: black;
     color: white;
@@ -8,17 +10,19 @@
     font-size: 2.2rem;
 }
 
-.Containerprimero,
-.Containersegundo,
-.Containertercero,
-.Containercuarto,
-.Containerquinto,
-.Containersexto,
-.Containerseptimo,
-.Containeroctavo {
+.Intro,
+.ContainerPrimero,
+.ContainerSegundo,
+.ContainerTercero,
+.ContainerCuarto,
+.ContainerQuinto,
+.ContainerSexto,
+.ContainerSeptimo,
+.ContainerOctavo {
     display: flex;
     width: 100%;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
     position: relative;
     background-repeat: no-repeat;
@@ -27,19 +31,208 @@
     background-attachment: fixed;
 }
 
-/* ------Colores y efectos de textos------*/
+.Inicio {
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    z-index: 3;
+    background-image: url(https://images.pexels.com/photos/63703/pexels-photo-63703.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.Inicio.active {
+    opacity: 0;
+    z-index: 0;
+    animation: scale 2s ease-in;
+
+}
+
+.Botones-play {
+    cursor: pointer;
+    animation: glow 1s alternate infinite;
+}
+
+@keyframes scale {
+    0% {
+        opacity: 1;
+        z-index: 3;
+    }
+
+    100% {
+        opacity: 0;
+        transform: scale(1.5);
+
+    }
+}
+
+.Header-pause,
+.Header-play {
+    background-color: rgba(0, 0, 0, 0);
+    color: white;
+    position: absolute;
+    font-size: larger;
+    cursor: pointer;
+    border: none;
+    top: 120%;
+    animation: glow 2s alternate infinite;
+
+}
+
+.Header-pause {
+    left: 2.5rem;
+}
+
+.Header-play {
+    left: 0.5rem;
+}
+
+
+.Botones-button,
+.Botones-play {
+    background-color: rgba(0, 0, 0, 0);
+    color: white;
+    border: none;
+    font-size: x-large;
+    padding: 0.5rem;
+}
+
+.Box {
+    background-color: rgba(0, 0, 0, 0.63);
+    width: 30%;
+    height: 75vh;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 15px;
+}
+
+.Guitarra {
+    width: 10%;
+    position: absolute;
+    left: 25%;
+    opacity: 0;
+    top: 40%;
+}
+
+.Box-img {
+    width: 80%;
+    padding: 1rem;
+    border-radius: 1rem;
+}
+
+.Inicio-p,
+.Inicio-t {
+    position: absolute;
+    width: 400%;
+    animation: lado 5s alternate-reverse infinite;
+}
+
+.Inicio-p {
+    animation: lado 5s alternate infinite;
+    bottom: 0;
+}
+
+.Inicio-t {
+    animation: ladoC 5s alternate infinite;
+    bottom: 1rem;
+}
+
+@keyframes lado {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translate(550px);
+    }
+
+}
+
+@keyframes ladoC {
+    0% {
+        transform: translateX(550px);
+    }
+
+    100% {
+        transform: translate(0);
+    }
+
+}
+
+/*-----------
+  Scrollbar
+------------*/
+
+::-webkit-scrollbar {
+    width: 0;
+}
+
+.Progressbar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 10px;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.05);
+    z-index: 2;
+    animation: animate 5s linear infinite
+}
+
+
+@keyframes animate {
+    0% {
+        filter: hue-rotate(0deg);
+    }
+
+    50% {
+        filter: hue-rotate(360deg);
+    }
+}
+
+.Progressbar::after,
+.Progressbar::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to top, #008aff, #00ffe7);
+    filter: blur(10px);
+}
+
+.Progressbar::before {
+    filter: blur(30px);
+}
+
+/*------------------------
+    Efectos de textos
+-------------------------*/
 .Container-h2 {
     padding: 3rem;
     color: aquamarine;
     text-shadow: 0 0 20px aquamarine;
+    opacity: 0;
+
 }
 
 .Container-h3 {
     color: orange;
     text-shadow: 0 0 20px orange;
+    opacity: 0;
+
 }
 
-/*------Header y menu------*/
+/*-----------
+Header y menu
+-----------*/
 .Header {
     position: fixed;
     display: flex;
@@ -64,12 +257,44 @@
 }
 
 .Lista-a:hover {
-    background-color: white;
-    color: black;
-    transition: 1s ease;
+    animation: boxShadow 2s alternate infinite;
 }
 
-/* ------Botones usados para el menu hamburguesa------ */
+@keyframes boxShadow {
+    0% {
+        box-shadow: 0 0 50px cyan;
+        background-color: cyan;
+    }
+
+    25% {
+        box-shadow: 0 0 50px orange;
+        background-color: orange;
+
+    }
+
+    50% {
+        box-shadow: 0 0 50px red;
+        background-color: red;
+
+    }
+
+    75% {
+        box-shadow: 0 0 50px purple;
+        background-color: purple;
+
+    }
+
+    100% {
+        box-shadow: 0 0 50px yellow;
+        background-color: yellow;
+
+    }
+
+}
+
+/* ------------------------------------
+Botones usados para el menu hamburguesa
+------------------------------------ */
 .Header-btn {
     background-color: black;
     color: white;
@@ -95,31 +320,54 @@
     right: 3rem;
 }
 
-/* ------Logo principal con sus redes y efectos------ */
+/* -----------------------------------
+Intro principal con sus redes y efectos
+----------------------------------- */
+.Intro {
+    height: 100vh;
+}
+
 .Logo {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     height: 40%;
-    margin-top: 6rem
+    margin-top: 6rem;
 }
 
 .Logo-h1 {
     color: cyan;
     font-family: "Reggae One", system-ui;
-    animation: glow 1s ease-in-out infinite alternate;
+    animation: glow 2s alternate infinite;
 }
 
 @keyframes glow {
     0% {
-
+        color: cyan;
         text-shadow: 0 0 20px cyan;
+    }
+
+    25% {
+        color: orange;
+        text-shadow: 0 0 20px orange;
+    }
+
+    50% {
+        color: red;
+        text-shadow: 0 0 20px red;
+    }
+
+    75% {
+        color: purple;
+        text-shadow: 0 0 20px purple;
     }
 
     100% {
         transform: scale(1.2);
-        text-shadow: 0 0 50px cyan, 0 0 20px black;
+        color: yellow;
+        text-shadow: 0 0 20px yellow;
+        ;
     }
 }
 
@@ -131,16 +379,50 @@
     margin: 0.5rem;
 }
 
-/* ------Fondos transparentes de varias cajas------*/
+/* ---------------------------------
+Fondos transparentes de varias cajas
+----------------------------------*/
 .Container-p,
-.Logo,
 .Container-form {
     background-color: rgba(0, 0, 0, 0.250);
     border-radius: 15px;
     padding: 1rem;
 }
 
-/* ------Css imagenes------*/
+
+
+.Container-p,
+.Container-form {
+    opacity: 0;
+}
+
+.visible {
+    opacity: 1;
+    animation: Fadein 1s ease;
+
+
+}
+
+.Logo {
+    background-color: rgba(0, 0, 0, 0);
+}
+
+@keyframes Fadein {
+    0% {
+        opacity: 0;
+        transform: translateX(-1rem);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0%);
+    }
+}
+
+
+/* ----------
+Css imagenes
+-----------*/
 .Enlaces-img {
     border-radius: 50%;
     width: 100px;
@@ -150,8 +432,9 @@
 .Logo-img {
     width: 100px;
     border-radius: 50%;
-    box-shadow: 0 0 50px cyan;
 }
+
+
 
 .Galeria-img {
     width: 100%;
@@ -160,7 +443,9 @@
     height: 100%;
 }
 
-/* ------Botones y efectos de la galeria acordeon------ */
+/* -------------------------------------
+Botones y efectos de la galeria acordeon
+-------------------------------------- */
 .Container-mas,
 .Container-menos.active {
     display: block;
@@ -173,9 +458,12 @@
     color: white;
     font-size: xx-large;
     cursor: pointer;
-    box-shadow: 0 0 20px aquamarine;
     border: none;
+    animation: glow 2s alternate infinite;
+
+
 }
+
 
 
 
@@ -196,9 +484,13 @@
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
     padding: 0.5rem;
+    animation: Fadein 1s ease-in;
+
 }
 
-/* ------Efectos hover------ */
+/* -----------
+Efectos hover
+----------- */
 
 .Enlaces-img:hover {
     transform: scale(1.2);
@@ -208,29 +500,36 @@
     transform: scale(0.9);
 }
 
-/*------Backgrounds y efecto parallax------*/
+/*---------------------------
+Backgrounds y efecto parallax
+----------------------------*/
+.Intro {
+    background-image: url(https://png.pngtree.com/background/20230325/original/pngtree-stage-neon-light-illustration-background-picture-image_2166744.jpg);
+}
 
-.Containerprimero,
-.Containersegundo {
+.ContainerPrimero,
+.ContainerSegundo {
     background-image: url(https://images.pexels.com/photos/4062563/pexels-photo-4062563.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
 }
 
-.Containertercero,
-.Containercuarto {
+.ContainerTercero,
+.ContainerCuarto {
     background-image: url(https://images.pexels.com/photos/3596460/pexels-photo-3596460.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
 }
 
-.Containerquinto,
-.Containersexto {
+.ContainerQuinto,
+.ContainerSexto {
     background-image: url(https://images.pexels.com/photos/2111015/pexels-photo-2111015.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
 }
 
-.Containerseptimo,
-.Containeroctavo {
+.ContainerSeptimo,
+.ContainerOctavo {
     background-image: url(https://images.pexels.com/photos/11816397/pexels-photo-11816397.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
 }
 
-/* ------Galeria full size y botones adjuntos------ */
+/* ---------------------------------
+Galeria full size y botones adjuntos
+---------------------------------- */
 .Full {
     display: none;
     position: fixed;
@@ -284,14 +583,17 @@
     right: 1rem;
 }
 
-
-
-/* Css formulario */
+/*------------
+Css formulario
+-------------*/
 .Container-form {
     display: flex;
     flex-direction: column;
     margin-bottom: 5rem;
     width: 15%;
+    justify-content: center;
+    align-items: center;
+
 }
 
 .Label-correo,
@@ -308,14 +610,15 @@
     border-radius: 15px;
     width: 60%;
     color: white;
-    background-color: blue;
-    border: solid 2px black;
+    border: none;
     margin-top: 20px;
-    animation: glow 2s ease alternate infinite;
     cursor: pointer;
+    animation: boxShadow 2s alternate infinite;
 }
 
-/* Gifs parte de contactos */
+/* --------------------
+Gifs parte de contactos
+-------------------- */
 
 .Container-gifright,
 .Container-gifleft {
@@ -327,6 +630,7 @@
 .Container-gifright {
     right: 5%;
     top: 0;
+
 }
 
 .Container-gifleft {
@@ -336,9 +640,11 @@
 
 
 
-/* ------Colores redes------ */
+/* ----------
+Colores redes
+---------- */
 .fa-facebook-f {
-    color: blue;
+    color: #004ce4;
 }
 
 .fa-tiktok {
@@ -363,7 +669,9 @@
 }
 
 
-/* ------Media queries------ */
+/*-----------
+Media queries
+-----------*/
 /*Mobile*/
 @media only screen and (max-width: 700px) {
 
@@ -371,20 +679,65 @@
         font-size: 1rem;
     }
 
-    .Lista {
-        display: none;
+    .Box {
+        width: 80%;
     }
 
-    .Lista.active {
+    .Header-pause,
+    .Header-play {
+        top: 25%;
+    }
+
+    .Guitarra {
+        top: 50%;
+        left: 5%;
+    }
+
+    .Lista {
+        display: none;
+        animation: close 2s ease-in;
+    }
+
+    .Lista.active,
+    .Lista {
         background-color: rgba(0, 0, 0, 0.692);
         width: 100%;
         height: 100vh;
         position: absolute;
         top: 0;
-        display: flex;
-        flex-direction: column;
         list-style: none;
         justify-content: center;
+        flex-direction: column;
+    }
+
+    .Lista.active {
+        display: flex;
+        animation: open 2s ease-in;
+    }
+
+    @keyframes open {
+        0% {
+            transform: translateY(-100%);
+        }
+
+        100% {
+            transform: translateY(0);
+        }
+
+    }
+
+    @keyframes close {
+        0% {
+            transform: translateY(0);
+            opacity: 1;
+            display: flex;
+        }
+
+        100% {
+            transform: translateY(-100%);
+            opacity: 0;
+        }
+
     }
 
     .Lista-a {
@@ -400,6 +753,7 @@
     .Header-btn {
         display: block;
         padding: 1rem;
+        margin-right: 1rem;
 
     }
 
@@ -450,6 +804,10 @@
         width: 30%;
     }
 
+    .Guitarra {
+        top: 47%;
+        left: 15%;
+    }
 }
 
 /*Pc*/

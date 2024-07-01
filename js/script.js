@@ -62,3 +62,46 @@ btnPrev.addEventListener("click", () => {
     currentIndex = (currentIndex - 1 + img.length) % img.length;
     openFull(img[currentIndex].src)
 })
+
+window.addEventListener('scroll', () => {
+    const container = document.querySelectorAll('.Container-p,.Container-h2,.Container-h1,.Container-h3,.Container-form,.Guitarra,.Enlaces-img,.Container-gifleft,.Container-gifright')
+    container.forEach(box => {
+        if (box.getBoundingClientRect().top < window.innerHeight * 0.8) {
+            box.classList.add('visible');
+        }
+        else {
+            box.classList.remove('visible')
+
+        }
+    })
+ 
+
+}
+)
+
+let progress = document.getElementsByClassName('Progressbar')[0];
+let totalHeight = document.body.scrollHeight - window.innerHeight;
+window.onscroll = function () {
+    let progressHeight = (window.scrollY / totalHeight) * 100;
+    progress.style.height = progressHeight + "%";
+}
+let audio = document.querySelector('.audio');
+let btnPLay = document.querySelector('.Botones-play').addEventListener('click', () => {
+    close()
+    audio.play()
+}
+)
+let btnPause = document.querySelector('.Header-pause').addEventListener('click', () => {
+    audio.pause()
+})
+let btnPLayagain = document.querySelector('.Header-play').addEventListener('click', () => {
+    audio.play()
+})
+function close() {
+    let box = document.querySelector('.Box')
+    let inicio = document.querySelector('.Inicio')
+    box.classList.add('active')
+    inicio.classList.add('active')
+
+
+}

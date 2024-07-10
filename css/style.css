@@ -11,14 +11,14 @@ Css Principal
 }
 
 .Intro,
-.ContainerPrimero,
-.ContainerSegundo,
-.ContainerTercero,
-.ContainerCuarto,
-.ContainerQuinto,
-.ContainerSexto,
-.ContainerSeptimo,
-.ContainerOctavo {
+.Containerbio,
+.Containermusica,
+.Containerrelacionados,
+.Containerfestivales,
+.Containergaleria,
+.Containertrayectoria,
+.Containereventos,
+.Containercontacto {
     display: flex;
     width: 100%;
     flex-direction: column;
@@ -30,6 +30,10 @@ Css Principal
     background-position: bottom center;
     background-attachment: fixed;
 }
+
+/*--------------
+Pagina de inicio
+---------------*/
 
 .Inicio {
     height: 100vh;
@@ -52,79 +56,42 @@ Css Principal
 }
 
 .Botones-play {
-    cursor: pointer;
     animation: glow 1s alternate infinite;
 }
-
-@keyframes scale {
-    0% {
-        opacity: 1;
-        z-index: 3;
-    }
-
-    100% {
-        opacity: 0;
-        transform: scale(1.5);
-
-    }
+.Botones-heart:hover{
+    color: red;
+}
+.Botones-move:hover{
+    color: cyan;
+}
+.Botones-share:hover{
+    color: greenyellow;
 }
 
-.Header-pause,
-.Header-play {
-    background-color: rgba(0, 0, 0, 0);
-    color: white;
-    position: absolute;
-    font-size: larger;
-    cursor: pointer;
-    border: none;
-    top: 120%;
-    animation: glow 2s alternate infinite;
-
-}
-
-.Header-pause {
-    left: 2.5rem;
-}
-
-.Header-play {
-    left: 0.5rem;
-}
-
-
-.Botones-button,
-.Botones-play {
+.Botones-move,.Botones-share,
+.Botones-play,.Botones-heart {
     background-color: rgba(0, 0, 0, 0);
     color: white;
     border: none;
     font-size: x-large;
     padding: 0.5rem;
+    cursor: pointer;
+
 }
 
 .Box {
     background-color: rgba(0, 0, 0, 0.63);
-    width: 30%;
-    height: 75vh;
+    width: 40%;
+    height: 80vh;
     justify-content: center;
     align-items: center;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    border-radius: 15px;
-}
-
-.Guitarra {
-    width: 10%;
-    position: absolute;
-    left: 25%;
-    opacity: 0;
-    top: 40%;
+    border-radius: 1rem;
 }
 
 .Box-img {
-    width: 80%;
-    padding: 1rem;
-    border-radius: 1rem;
+    width: 60%;
 }
 
 .Inicio-p,
@@ -144,25 +111,23 @@ Css Principal
     bottom: 1rem;
 }
 
-@keyframes lado {
-    0% {
-        transform: translateX(0);
-    }
-
-    100% {
-        transform: translate(550px);
-    }
-
+/*-----------
+    Gifs
+------------*/
+.Guitarra {
+    width: 10%;
+    position: absolute;
+    left: 25%;
+    opacity: 0;
+    top: 40%;
 }
 
-@keyframes ladoC {
-    0% {
-        transform: translateX(550px);
-    }
-
-    100% {
-        transform: translate(0);
-    }
+.Container-gifright,
+.Container-gifleft {
+    position: absolute;
+    width: 15%;
+    bottom: 0;
+    opacity: 0;
 
 }
 
@@ -186,14 +151,12 @@ Css Principal
 }
 
 
-@keyframes animate {
-    0% {
-        filter: hue-rotate(0deg);
-    }
 
-    50% {
-        filter: hue-rotate(360deg);
-    }
+.Enlaces-img {
+    border-radius: 50%;
+    width: 100px;
+    box-shadow: 0 0 50px orange;
+    opacity: 0;
 }
 
 .Progressbar::after,
@@ -260,36 +223,25 @@ Header y menu
     animation: boxShadow 2s alternate infinite;
 }
 
-@keyframes boxShadow {
-    0% {
-        box-shadow: 0 0 50px cyan;
-        background-color: cyan;
-    }
+.Header-pause,
+.Header-play {
+    background-color: rgba(0, 0, 0, 0);
+    color: white;
+    position: absolute;
+    font-size: larger;
+    cursor: pointer;
+    border: none;
+    top: 120%;
+    animation: glow 2s alternate infinite;
 
-    25% {
-        box-shadow: 0 0 50px orange;
-        background-color: orange;
+}
 
-    }
+.Header-pause {
+    left: 2.5rem;
+}
 
-    50% {
-        box-shadow: 0 0 50px red;
-        background-color: red;
-
-    }
-
-    75% {
-        box-shadow: 0 0 50px purple;
-        background-color: purple;
-
-    }
-
-    100% {
-        box-shadow: 0 0 50px yellow;
-        background-color: yellow;
-
-    }
-
+.Header-play {
+    left: 0.5rem;
 }
 
 /* ------------------------------------
@@ -342,35 +294,6 @@ Intro principal con sus redes y efectos
     animation: glow 2s alternate infinite;
 }
 
-@keyframes glow {
-    0% {
-        color: cyan;
-        text-shadow: 0 0 20px cyan;
-    }
-
-    25% {
-        color: orange;
-        text-shadow: 0 0 20px orange;
-    }
-
-    50% {
-        color: red;
-        text-shadow: 0 0 20px red;
-    }
-
-    75% {
-        color: purple;
-        text-shadow: 0 0 20px purple;
-    }
-
-    100% {
-        transform: scale(1.2);
-        color: yellow;
-        text-shadow: 0 0 20px yellow;
-        ;
-    }
-}
-
 .Redes-f,
 .Redes-i,
 .Redes-y,
@@ -407,28 +330,9 @@ Fondos transparentes de varias cajas
     background-color: rgba(0, 0, 0, 0);
 }
 
-@keyframes Fadein {
-    0% {
-        opacity: 0;
-        transform: translateX(-1rem);
-    }
-
-    100% {
-        opacity: 1;
-        transform: translateX(0%);
-    }
-}
-
-
 /* ----------
 Css imagenes
 -----------*/
-.Enlaces-img {
-    border-radius: 50%;
-    width: 100px;
-    box-shadow: 0 0 50px orange;
-}
-
 .Logo-img {
     width: 100px;
     border-radius: 50%;
@@ -507,23 +411,23 @@ Backgrounds y efecto parallax
     background-image: url(https://wallpapercave.com/wp/wp3224260.jpg);
 }
 
-.ContainerPrimero,
-.ContainerSegundo {
+.Containerbio,
+.Containermusica {
     background-image: url(https://images.pexels.com/photos/4062563/pexels-photo-4062563.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
 }
 
-.ContainerTercero,
-.ContainerCuarto {
+.Containerrelacionados,
+.Containerfestivales {
     background-image: url(https://images.pexels.com/photos/3596460/pexels-photo-3596460.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
 }
 
-.ContainerQuinto,
-.ContainerSexto {
+.Containergaleria,
+.Containertrayectoria {
     background-image: url(https://images.pexels.com/photos/2111015/pexels-photo-2111015.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
 }
 
-.ContainerSeptimo,
-.ContainerOctavo {
+.Containereventos,
+.Containercontacto {
     background-image: url(https://images.pexels.com/photos/11816397/pexels-photo-11816397.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
 }
 
@@ -540,6 +444,7 @@ Galeria full size y botones adjuntos
     height: 100%;
     background-color: rgba(0, 0, 0, 0.692);
     z-index: 3;
+    animation: Fadein 2s ease;
 }
 
 .Full-img {
@@ -616,15 +521,8 @@ Css formulario
 }
 
 /* --------------------
-Gifs parte de contactos
+        Gifs 
 -------------------- */
-
-.Container-gifright,
-.Container-gifleft {
-    position: absolute;
-    width: 15%;
-    bottom: 0;
-}
 
 .Container-gifright {
     right: 5%;
@@ -665,8 +563,126 @@ Colores redes
 
 .Footer {
     margin: 1rem;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    width: 96%;
 }
 
+.Label {
+    width: 100%;
+}
+
+/*-----------
+Animaciones
+-----------*/
+@keyframes Fadein {
+    0% {
+        opacity: 0;
+        transform: translateX(-1rem);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0%);
+    }
+}
+
+@keyframes glow {
+    0% {
+        color: cyan;
+        text-shadow: 0 0 20px cyan;
+    }
+
+    25% {
+        color: orange;
+        text-shadow: 0 0 20px orange;
+    }
+
+    50% {
+        color: red;
+        text-shadow: 0 0 20px red;
+    }
+
+    75% {
+        color: purple;
+        text-shadow: 0 0 20px purple;
+    }
+
+    100% {
+        transform: scale(1.2);
+        color: yellow;
+        text-shadow: 0 0 20px yellow;
+        ;
+    }
+}
+
+@keyframes boxShadow {
+    0% {
+        box-shadow: 0 0 50px cyan;
+        background-color: cyan;
+    }
+
+    25% {
+        box-shadow: 0 0 50px orange;
+        background-color: orange;
+
+    }
+
+    50% {
+        box-shadow: 0 0 50px red;
+        background-color: red;
+
+    }
+
+    75% {
+        box-shadow: 0 0 50px purple;
+        background-color: purple;
+
+    }
+
+    100% {
+        box-shadow: 0 0 50px yellow;
+        background-color: yellow;
+
+    }
+
+}
+
+@keyframes scale {
+    0% {
+        opacity: 1;
+        z-index: 3;
+    }
+
+    100% {
+        opacity: 0;
+        transform: scale(1.5);
+
+    }
+}
+
+@keyframes lado {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translate(550px);
+    }
+
+}
+
+@keyframes ladoC {
+    0% {
+        transform: translateX(550px);
+    }
+
+    100% {
+        transform: translate(0);
+    }
+
+}
 
 /*-----------
 Media queries
@@ -677,6 +693,7 @@ Media queries
     :root {
         font-size: 1rem;
     }
+
     .Box {
         width: 80%;
     }
@@ -703,6 +720,7 @@ Media queries
         height: 100vh;
         position: absolute;
         top: 0;
+        left: 0;
         list-style: none;
         justify-content: center;
         flex-direction: column;
@@ -739,7 +757,7 @@ Media queries
     }
 
     .Lista-a {
-        margin-right: 4rem;
+        margin-right: 6rem;
     }
 
     .Lista-a,
@@ -805,6 +823,20 @@ Media queries
     .Guitarra {
         top: 47%;
         left: 15%;
+    }
+
+    .Box {
+        width: 50%;
+    }
+}
+
+@keyframes animate {
+    0% {
+        filter: hue-rotate(0deg);
+    }
+
+    50% {
+        filter: hue-rotate(360deg);
     }
 }
 

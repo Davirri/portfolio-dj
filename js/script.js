@@ -74,7 +74,7 @@ window.addEventListener('scroll', () => {
 
         }
     })
- 
+
 
 }
 )

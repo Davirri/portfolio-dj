@@ -10,6 +10,7 @@ Css Principal
     font-size: 2.2rem;
 }
 
+/*Aquí encontramos los containers mas importantes con varios parámetros para que tengan un diseño parecido y también unas reglas para el background que hacen que se quede la imagen de fondo fija mientras el texto se va moviendo hasta que aparece la siguiente imágen como un efecto parallax. Tmbién les puse position relative para pode rmover cualquier componente que este dentor de ellos libremente*/
 .Intro,
 .Containerbio,
 .Containermusica,
@@ -34,7 +35,7 @@ Css Principal
 /*--------------
 Pagina de inicio
 ---------------*/
-
+/*Cabe destacar que esta parte tiene un z-index mayor a los demas para que sea lo primerop en visualizarse al entrar a la página web */
 .Inicio {
     height: 100vh;
     width: 100%;
@@ -48,6 +49,8 @@ Pagina de inicio
     align-items: center;
 }
 
+/*Aquí encontramos la clase active que luego agregamos con java que nos sirve para realizar la animación de intro de la página */
+
 .Inicio.active {
     opacity: 0;
     z-index: 0;
@@ -55,21 +58,32 @@ Pagina de inicio
 
 }
 
+/* Otra animación para un boton específico que luego explicare en la parte de animaciones*/
+
 .Botones-play {
     animation: glow 1s alternate infinite;
 }
-.Botones-heart:hover{
+
+/*Hoover que cambia el color al pasar por encima*/
+
+.Botones-heart:hover {
     color: red;
 }
-.Botones-move:hover{
+
+.Botones-move:hover {
     color: cyan;
 }
-.Botones-share:hover{
+
+.Botones-share:hover {
     color: greenyellow;
 }
 
-.Botones-move,.Botones-share,
-.Botones-play,.Botones-heart {
+/*Botones con sus especificaciones y colores para que no tengan color de fondo*/
+
+.Botones-move,
+.Botones-share,
+.Botones-play,
+.Botones-heart {
     background-color: rgba(0, 0, 0, 0);
     color: white;
     border: none;
@@ -78,6 +92,8 @@ Pagina de inicio
     cursor: pointer;
 
 }
+
+/*Caja donde se encuentran tanto la imágen como los botones con sus caracteristicas para que se visualize bien en la página con un rgba para que se vea el fondo pero detras de la caja pero tambien se visualize la caja transparente*/
 
 .Box {
     background-color: rgba(0, 0, 0, 0.63);
@@ -90,15 +106,18 @@ Pagina de inicio
     border-radius: 1rem;
 }
 
+/*Tamaño de la imágen*/
+
 .Box-img {
     width: 60%;
 }
+
+/*Especificaciones del texto que va pasando de un lado a otro con sus animaciones*/
 
 .Inicio-p,
 .Inicio-t {
     position: absolute;
     width: 400%;
-    animation: lado 5s alternate-reverse infinite;
 }
 
 .Inicio-p {
@@ -114,6 +133,8 @@ Pagina de inicio
 /*-----------
     Gifs
 ------------*/
+/*Tamaños y posiciones de los gifs para que se vean bien en la página*/
+
 .Guitarra {
     width: 10%;
     position: absolute;
@@ -126,14 +147,48 @@ Pagina de inicio
 .Container-gifleft {
     position: absolute;
     width: 15%;
-    bottom: 0;
     opacity: 0;
-
 }
+
+.Container-gifright {
+    right: 5%;
+    top: 0;
+}
+
+.Container-gifleft {
+    left: 5%;
+    bottom: 0;
+}
+
+/* ----------
+Css imagenes
+-----------*/
+.Logo-img {
+    width: 100px;
+    border-radius: 50%;
+}
+
+.Enlaces-img {
+    border-radius: 50%;
+    width: 100px;
+    box-shadow: 0 0 50px orange;
+    opacity: 0;
+}
+
+/*El cursosr pointer es para que al pasar popr encima del elemento se cambie el cursor a una mano que lo uso normalmente en elementos que puedes dar click para que realizen algo en la página o para enlaces*/
+.Galeria-img {
+    width: 100%;
+    border-radius: 15px;
+    cursor: pointer;
+    height: 100%;
+}
+
 
 /*-----------
   Scrollbar
 ------------*/
+
+/*En esta parte encontramos la scrollbar que lo primero que hacemos es quitar la scrollbar por defecto de la web y luego ya agregamos la nuestra con su animación*/
 
 ::-webkit-scrollbar {
     width: 0;
@@ -150,14 +205,7 @@ Pagina de inicio
     animation: animate 5s linear infinite
 }
 
-
-
-.Enlaces-img {
-    border-radius: 50%;
-    width: 100px;
-    box-shadow: 0 0 50px orange;
-    opacity: 0;
-}
+/*Aqui estamos agregando estilos a dos pseudoelementos que los utilizamos para añadir contenido decorativo en el que aplicamos un desenfoque con blur*/
 
 .Progressbar::after,
 .Progressbar::before {
@@ -178,6 +226,8 @@ Pagina de inicio
 /*------------------------
     Efectos de textos
 -------------------------*/
+/*Aqui agregamos distintos colores y efectos a los textos para que se vean bien dentro de la página*/
+
 .Container-h2 {
     padding: 3rem;
     color: aquamarine;
@@ -196,6 +246,8 @@ Pagina de inicio
 /*-----------
 Header y menu
 -----------*/
+/*Aqui tenemos el header que nos acompaña en toda la página ya que esta con position fixed para que tengamos el menu disponible todo el tiempo*/
+
 .Header {
     position: fixed;
     display: flex;
@@ -203,8 +255,11 @@ Header y menu
     background-color: black;
     width: 100%;
     top: 0;
+    left: 0;
     z-index: 1;
 }
+
+/*Diseñamos el contenido del menu y le ponemos una animación al hacer hoover*/
 
 .Lista {
     display: flex;
@@ -222,6 +277,8 @@ Header y menu
 .Lista-a:hover {
     animation: boxShadow 2s alternate infinite;
 }
+
+/*Estos son los botones que tenemos para reproducir o pausar la música y sus estilos el top 120% en este caso lo uso porque el header tiene position fixed y yo quiero que los botones esten fuera de la caja */
 
 .Header-pause,
 .Header-play {
@@ -275,6 +332,8 @@ Botones usados para el menu hamburguesa
 /* -----------------------------------
 Intro principal con sus redes y efectos
 ----------------------------------- */
+/*Aquí hacemos que nada mas pasar la intro eta parte se vea en el 100% de la pantalla de alto*/
+
 .Intro {
     height: 100vh;
 }
@@ -289,7 +348,6 @@ Intro principal con sus redes y efectos
 }
 
 .Logo-h1 {
-    color: cyan;
     font-family: "Reggae One", system-ui;
     animation: glow 2s alternate infinite;
 }
@@ -312,44 +370,27 @@ Fondos transparentes de varias cajas
     padding: 1rem;
 }
 
-
-
 .Container-p,
 .Container-form {
     opacity: 0;
 }
 
+/* ---------------------------
+Efecto principal de la página
+-----------------------------*/
+/* Este efecto realiza que al agrgar la clase visible a cualquier elemento de la página ocurra el efecto Fadein que configuraremos con java.
+Por es arazon tenemos en muchas partes del css un opacity de 0 para que no se vean de primeras en la página*/
 .visible {
     opacity: 1;
     animation: Fadein 1s ease;
-
-
-}
-
-.Logo {
-    background-color: rgba(0, 0, 0, 0);
-}
-
-/* ----------
-Css imagenes
------------*/
-.Logo-img {
-    width: 100px;
-    border-radius: 50%;
 }
 
 
-
-.Galeria-img {
-    width: 100%;
-    border-radius: 15px;
-    cursor: pointer;
-    height: 100%;
-}
 
 /* -------------------------------------
 Botones y efectos de la galeria acordeon
 -------------------------------------- */
+/*Aqui tenemos los botones para abrir la galería con sus clase active para que cuando un boton este activo el otro no se vea y viceversa*/
 .Container-mas,
 .Container-menos.active {
     display: block;
@@ -364,12 +405,7 @@ Botones y efectos de la galeria acordeon
     cursor: pointer;
     border: none;
     animation: glow 2s alternate infinite;
-
-
 }
-
-
-
 
 
 .Container-menos.active {
@@ -377,12 +413,16 @@ Botones y efectos de la galeria acordeon
     top: 8.2rem;
 }
 
+/* --------------
+Galería y efectos
+----------------*/
 .Galeria,
 .Container-menos,
 .Container-mas.active {
     display: none;
 }
 
+/* Esta clase la utilizamos para que la galería se a visible con el display grid para colocar las imágenes*/
 .Galeria.active {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -404,9 +444,9 @@ Efectos hover
     transform: scale(0.9);
 }
 
-/*---------------------------
-Backgrounds y efecto parallax
-----------------------------*/
+/*------------------------------
+Backgrounds para efecto parallax
+-------------------------------*/
 .Intro {
     background-image: url(https://wallpapercave.com/wp/wp3224260.jpg);
 }
@@ -434,6 +474,7 @@ Backgrounds y efecto parallax
 /* ---------------------------------
 Galeria full size y botones adjuntos
 ---------------------------------- */
+/*Este css lo utilizamos para cuando tenemos la galería en pantalla completa*/
 .Full {
     display: none;
     position: fixed;
@@ -451,6 +492,8 @@ Galeria full size y botones adjuntos
     width: 50%;
     border-radius: 15px;
 }
+
+/*Aqui posicionamos los botones dentor de la galería en pantalla completa*/
 
 .Full-x {
     position: absolute;
@@ -471,6 +514,8 @@ Galeria full size y botones adjuntos
     height: 50px;
     border: none;
 }
+
+/*Ponemos un efecto hoover que al pasar por encima realize la animación*/
 
 .Full-btnPrev:hover,
 .Full-btnNext:hover {
@@ -508,6 +553,9 @@ Css formulario
 
 }
 
+.Label {
+    width: 100%;
+}
 
 .Label-btn {
     padding: 0.2rem;
@@ -519,23 +567,6 @@ Css formulario
     cursor: pointer;
     animation: boxShadow 2s alternate infinite;
 }
-
-/* --------------------
-        Gifs 
--------------------- */
-
-.Container-gifright {
-    right: 5%;
-    top: 0;
-
-}
-
-.Container-gifleft {
-    left: 5%;
-}
-
-
-
 
 /* ----------
 Colores redes
@@ -561,6 +592,9 @@ Colores redes
     color: white;
 }
 
+/*----
+Footer
+-----*/
 .Footer {
     margin: 1rem;
     position: absolute;
@@ -569,13 +603,14 @@ Colores redes
     width: 96%;
 }
 
-.Label {
-    width: 100%;
-}
+
 
 /*-----------
 Animaciones
 -----------*/
+/*Efecto simple que hace aparecer el contenido  y lo mueve de -1rem a la posicion inicial
+donde 0% es el principio de la animación y 100% el final*/
+
 @keyframes Fadein {
     0% {
         opacity: 0;
@@ -587,6 +622,9 @@ Animaciones
         transform: translateX(0%);
     }
 }
+
+/*En esta animación jugamos tanto con los tamaños como con los colores del texto además de agregarle una sombra al texto de el mismo color
+donde va pasando por diferentes etapas del 0% al 100% en el cual cada etapa es de un color.El scale se lo ponemos solo al 100% para que vaya creciendo mientras cambia de colores */
 
 @keyframes glow {
     0% {
@@ -616,6 +654,8 @@ Animaciones
         ;
     }
 }
+
+/*Esta es muy parecida a la anterior pero en este caso se lo realizamos a la caja tanto el color como la sombra*/
 
 @keyframes boxShadow {
     0% {
@@ -649,6 +689,8 @@ Animaciones
 
 }
 
+/*Este efecto es para la intro de la página que hace que vaya aumentado el tamaño mientras desaparece y en este caso ponemos el z index para que quede por encima de la siguiente página mientras desaparece*/
+
 @keyframes scale {
     0% {
         opacity: 1;
@@ -662,16 +704,31 @@ Animaciones
     }
 }
 
+/*Esta animación hace que se produzca una rotación de 0 deg hata 360 deg.La utilizamos en la scrollbar para que haga el efecto de ir cambiando de color*/
+@keyframes animate {
+    0% {
+        filter: hue-rotate(0deg);
+    }
+
+    50% {
+        filter: hue-rotate(360deg);
+    }
+}
+
+/*Efecto que se utiliza para el movimiento del eje x que empieza de 0 y termina en 550px*/
+
 @keyframes lado {
     0% {
         transform: translateX(0);
     }
 
     100% {
-        transform: translate(550px);
+        transform: translateX(550px);
     }
 
 }
+
+/*Es igual que ela anterior pero en viceversa y las utilizo para las letras de la intro que se vayan moviendo de un lado al otro en el eje x derecha o izquierda segun la aniamción solo que uso tambien el alternate para que se vayan variando y creo 2 animaciones para que una empieze hacia un lado y la otra hacia el otro */
 
 @keyframes ladoC {
     0% {
@@ -679,7 +736,7 @@ Animaciones
     }
 
     100% {
-        transform: translate(0);
+        transform: translateX(0);
     }
 
 }
@@ -689,6 +746,7 @@ Media queries
 -----------*/
 /*Mobile*/
 @media only screen and (max-width: 700px) {
+    /*Princiipalmente en mobile son cambios de tamaños o de posicionamiento para adaptarlos a la versión de movil*/
 
     :root {
         font-size: 1rem;
@@ -697,7 +755,7 @@ Media queries
     .Box {
         width: 80%;
     }
-
+  
     .Header-pause,
     .Header-play {
         top: 25%;
@@ -707,6 +765,8 @@ Media queries
         top: 40%;
         left: 5%;
     }
+
+    /*Aquí tenemos la clase active para el menu desplegable que se tiene que activar solo en version de movil */
 
     .Lista {
         display: none;
@@ -719,17 +779,20 @@ Media queries
         width: 100%;
         height: 100vh;
         position: absolute;
-        top: 0;
         left: 0;
         list-style: none;
         justify-content: center;
         flex-direction: column;
     }
 
+    /*El animation lo que realiza es que se produzca la animación cuyo nombre esta escrito de primero y luego le puedes agragar un tiempo, un delay, la velocidad de la animación, hacerla infinita, que se reproduzca primero hacia delante y luego hacia tras tal como alternate etc...*/
+
     .Lista.active {
         display: flex;
         animation: open 2s ease-in;
     }
+
+    /*Esta animación nos sirve para abrir el menu hamburguesa que lo que hace es que vaya apareciendo desde la posición -100% del Y hasta que llegue a 0 es decir que el menu aparezca hacia abajo */
 
     @keyframes open {
         0% {
@@ -741,6 +804,8 @@ Media queries
         }
 
     }
+
+    /*Es lo mismo que la anterior pero viceversa esta vez inicia en la posicion 0 y va hasta la posicion -100% es decir hacia arriba*/
 
     @keyframes close {
         0% {
@@ -785,6 +850,8 @@ Media queries
         top: 13rem;
     }
 
+    /*Pequeño cambio en mobile para que el botón de menos este en la misma posición al aparecer que el botón de mas*/
+
     .Container-menos.active {
         display: block;
         position: absolute;
@@ -800,6 +867,16 @@ Media queries
         width: 20%;
     }
 
+    .Guitarra {
+        width: 20%;
+    }
+
+    .Container-gifleft {
+        left: 5%;
+        top: 25%;
+    }
+
+
     .Enlaces-img {
         width: 50px;
     }
@@ -808,6 +885,8 @@ Media queries
 
 /*Tablet*/
 @media only screen and (min-width: 701px) and (max-width:1024px) {
+    /*Princiipalmente en tablet son cambios de tamaños o de posicionamiento para adaptarlos a la versión de tablet*/
+
     :root {
         font-size: 1.5rem;
     }
@@ -830,19 +909,11 @@ Media queries
     }
 }
 
-@keyframes animate {
-    0% {
-        filter: hue-rotate(0deg);
-    }
 
-    50% {
-        filter: hue-rotate(360deg);
-    }
-}
 
 /*Pc*/
 @media only screen and (min-width: 1025px) {
-
+    /*Pequeños cambios en algunos elementos de el proyecto en versión pc*/
 
     .Header img {
         width: 100px;

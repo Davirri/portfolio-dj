@@ -24,9 +24,12 @@
 </head>
 
 <body>
+    <!-------------------------------------------
+     Página que se muestra al iniciar la página
+     --------------------------------------------->
     <Section class="Inicio">
         <div class="Box">
-            <img class="Box-img" src="assets/292243499_441406477570682_7350155460282061435_n.webp" alt="inicial">
+            <img class="Box-img" src="assets/292243499_441406477570682_7350155460282061435_n.webp" alt="imgInicio">
             <h1> Dj Jesús Murciego</h1>
             <div class="Botones">
                 <button class="Botones-share"><i class="fa-solid fa-share"></i></button>
@@ -48,13 +51,16 @@
             @jesusmurciego @jesusmurciego @jesusmurciego @jesusmurciego @jesusmurciego</p>
     </Section>
     <div class="Progressbar"></div>
-    <!----------------------------
-     Header con el menu principal 
-     ----------------------------->
+    <!-----------------------------------------------------------
+     Header con el menu principal y elemntos menu hamburguesa
+     ------------------------------------------------------------>
     <header class="Header">
+        <!--Estos son los botones que te sirven para pausar o iniciar la música mientras navegas por la web-->
+
         <button class="Header-pause"><i class="fa-solid fa-pause"></i></button>
         <button class="Header-play"><i class="fa-solid fa-play"></i></button>
         <nav>
+            <!--En esta parte se encuentran los links que te llevan a cada parte de la página mediante las id de cada sección-->
             <ul class="Lista">
                 <li><a class="Lista-a" href="#Seccion-1">Bio</a></li>
                 <li><a class="Lista-a" href="#Seccion-2">Música </a></li>
@@ -66,13 +72,14 @@
                 <li><a class="Lista-a" href="#Seccion-8">Contacto</a></li>
             </ul>
         </nav>
+        <!--Estos son los botones que se usan en el menu hamburguesa para cerrarla y abrirla-->
         <button class="Header-x">X</button>
         <button class="Header-btn"><i class="fa-solid fa-bars"></i></button>
 
     </header>
-    <!----------------------------------------------------------------------
-    Sección principal en la que se observa la primera impresión de la página
-    ----------------------------------------------------------------------->
+    <!------------------------------------------------------
+    Sección donde se encuentran el logo y las redes sociales
+    -------------------------------------------------------->
 
     <section class="Intro">
         <div class="Logo">
@@ -80,21 +87,25 @@
                 src="https://yt3.ggpht.com/ytc/AIdro_nY1qXOdYccd50eKlSbLJ1VLsklnK379pcekXJeZZtjiI3H=s88-c-k-c0x00ffffff-no-rj"
                 alt="A">
             <h2 class="Logo-h1">Jesús Murciego Alonso</h2>
+            <!--Aqui encontramos las redes y sus enlaces -->
 
             <div class="Redes">
-                <a class="Redes-f" href="https://www.facebook.com/jesus.murciegoalonso"><i
+                <a target="_blank" class="Redes-f" href="https://www.facebook.com/jesus.murciegoalonso"><i
                         class="fa-brands fa-facebook-f"></i></a>
-                <a class="Redes-i" href="https://www.instagram.com/jesusmurciego/"><i class="fa-brands fa-instagram">
+                <a target="_blank" class="Redes-i" href="https://www.instagram.com/jesusmurciego/"><i
+                        class="fa-brands fa-instagram">
                     </i></a>
-                <a class="Redes-y" href="https://www.youtube.com/channel/UCpgAvxFTblnZxrZA9tmXEyA"><i
+                <a target="_blank" class="Redes-y" href="https://www.youtube.com/channel/UCpgAvxFTblnZxrZA9tmXEyA"><i
                         class="fa-brands fa-youtube"></i></a>
-                <a class="Redes-e" href=""><i class="fa-solid fa-envelope"></i></a>
-                <a class="Redes-t" href="https://www.tiktok.com/@jesusmurciegodj"><i
+                <a target="_blank" class="Redes-e" href=""><i class="fa-solid fa-envelope"></i></a>
+                <a target="_blank" class="Redes-t" href="https://www.tiktok.com/@jesusmurciegodj"><i
                         class="fa-brands fa-tiktok"></i></a>
             </div>
         </div>
     </section>
-
+    <!-------------------------------------------------------------------
+    Aqui encontraremos la primera sección de texto donde esta la biografía
+    --------------------------------------------------------------------->
     <section class="Containerbio" id="Seccion-1">
         <h2 class="Container-h2">Bio</h2>
 
@@ -119,9 +130,9 @@
 
 
     </section>
-    <!----------------------------------------------------------------------
-    Sección principal en la que se observa la primera impresión de la página
-    ----------------------------------------------------------------------->
+    <!------------------------------------------------------
+   Sección en la que describes la música que hace el artista
+    -------------------------------------------------------->
     <section class="Containermusica" id="Seccion-2">
 
         <h2 class="Container-h2">Música</h2>
@@ -135,10 +146,11 @@
 
     </section>
     <!----------------------------------------------------------------------
-    Sección principal en la que se observa la primera impresión de la página
+    Sección de texto en la que nos hace referencia a una artista relacionada 
     ----------------------------------------------------------------------->
     <section class="Containerrelacionados" id="Seccion-3">
         <h2 class="Container-h2">Relacionados</h2>
+        <!--Imágen de la artista que te lleva a su instagram-->
         <a href="https://www.instagram.com/saraymurciego/?hl=es" target="_blank" rel="noopener noreferrer"><img
                 class="Enlaces-img" loading="lazy" src="assets/387711596_647928380781486_3115968688097075145_n.jpg"
                 alt=""></a>
@@ -153,9 +165,9 @@
         <img class="Guitarra" src="https://static.wixstatic.com/media/7597f6_cb67773a5f8d4e54846f0c97cb54570d.gif"
             alt="">
     </section>
-    <!----------------------------------------------------------------------
-    Sección principal en la que se observa la primera impresión de la página
-    ----------------------------------------------------------------------->
+    <!------------------------------------------------------------------------
+    Sección de texto que nos dice en que festivales ha participado el artista
+    ------------------------------------------------------------------------->
     <section class="Containerfestivales" id="Seccion-4">
         <h2 class="Container-h2">Festivales</h2>
         <p class="Container-p">Jesús ha ofrecido grandes conciertos y ha participado en importantes festivales tanto a
@@ -169,32 +181,41 @@
 
     </section>
     <!----------------------------------------------------------------------
-    Sección principal en la que se observa la primera impresión de la página
+    Sección de galeria en la que se encuentran las imágenes de los artistas
     ----------------------------------------------------------------------->
     <section class="Containergaleria" id="Seccion-5">
         <h2 class="Container-h2">Galería </h2>
         <div class="Galeria">
-            <img class="Galeria-img" src="assets/119712181_1210129412719536_6540658867088858703_n.jpg" alt="">
-            <img class="Galeria-img" src="assets/130729169_192949852532809_1574920182082983631_n.jpg" alt="">
-            <img class="Galeria-img" src="assets/43984955_322592771806327_4652791306095164938_n.jpg" alt="">
-            <img class="Galeria-img" src="assets/329026439_1248653822725205_4041718284788941607_n.webp" alt="">
-            <img class="Galeria-img" src="assets/43984955_322592771806327_4652791306095164938_n.jpg" alt="">
-            <img class="Galeria-img" src="assets/72293662_436470313919311_2504943705426596103_n.jpg" alt="">
+            <!--Imágenes que van en el slider de la galería-->
+
+            <img class="Galeria-img" src="assets/119712181_1210129412719536_6540658867088858703_n.jpg" alt="imgGaleria">
+            <img class="Galeria-img" src="assets/130729169_192949852532809_1574920182082983631_n.jpg" alt="imgGaleria">
+            <img class="Galeria-img" src="assets/43984955_322592771806327_4652791306095164938_n.jpg" alt="imgGaleria">
+            <img class="Galeria-img" src="assets/329026439_1248653822725205_4041718284788941607_n.webp"
+                alt="imgGaleria">
+            <img class="Galeria-img" src="assets/43984955_322592771806327_4652791306095164938_n.jpg" alt="imgGaleria">
+            <img class="Galeria-img" src="assets/72293662_436470313919311_2504943705426596103_n.jpg" alt="imgGaleria">
         </div>
+        <!--Contenedor donde se va a mostrar cada una de las imágenes cuando este en pantalla completa-->
+
         <div class="Full">
             <span class="Full-x">X</span>
-            <img class="Full-img" src="assets/130729169_192949852532809_1574920182082983631_n.jpg" alt="">
+            <img class="Full-img" src="assets/130729169_192949852532809_1574920182082983631_n.jpg" alt="imgFull">
+            <!--Botones para ir a la siguiente o la anterior imágen del slider-->
+
             <button class="Full-btnPrev">Prev</button>
             <button class="Full-btnNext"> Next</button>
         </div>
+        <!--Botones para el acordeon de la galería que se puede abrir y cerrar con + y - respectivamente-->
+
         <button class="Container-mas">+</button>
         <button class="Container-menos">-</button>
 
 
     </section>
-    <!----------------------------------------------------------------------
-    Sección principal en la que se observa la primera impresión de la página
-    ----------------------------------------------------------------------->
+    <!---------------------------------------------------------
+    Sección de texto que nos cuenta la trayectoria del artista
+    ---------------------------------------------------------->
     <section class="Containertrayectoria" id="Seccion-6">
         <h2 class="Container-h2">Trayectoria</h2>
         <h3 class="Container-h3">Batería orquesta San Marcos</h3>
@@ -223,7 +244,7 @@
         </p>
     </section>
     <!----------------------------------------------------------------------
-    Sección principal en la que se observa la primera impresión de la página
+    Sección que nos describe que el artista también realiza eventos privados
     ----------------------------------------------------------------------->
     <section class="Containereventos" id="Seccion-7">
 
@@ -237,26 +258,29 @@
         </p>
 
     </section>
-    <!----------------------------------------------------------------------
-    Sección principal en la que se observa la primera impresión de la página
-    ----------------------------------------------------------------------->
+    <!---------------------------------------------------------
+    Sección de texto donde se encuentra la parte del formulario
+    ----------------------------------------------------------->
     <section class="Containercontacto" id="Seccion-8">
 
         <h2 class="Container-h2">Contacto</h2>
+        <!--Gifs de la parte de contacto-->
+
         <img class="Container-gifright"
             src="https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExa29wMXNiMHRyaTM4aWx0eGY3amlrbHMwZXRzd3hsdWhjMWNza3Y4ciZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/ek9dOPpAfS2u4XIuJT/giphy.webp"
-            alt="">
+            alt="Gif">
         <img class="Container-gifleft"
             src="https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExbzBxM2kzc3dzdXgwbHo5ZHRkMGU5cG96ZTF0MGJ3cGdyc3o1MHRpMSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/j5z2Wr17BrRfhLKZt2/giphy.webp"
-            alt="">
+            alt="Gif">
 
+        <!--Formulario con sus elementos básicos-->
 
-        <form class="Container-form" action="POST">
-            <label class="Label" for="">
+        <form class="Container-form" action="" method="post">
+            <label class="Label">
                 <input class="Label-correo" type="text" placeholder="Correo electrónico" required>
-            </label><label class="Label" for="">
+            </label><label class="Label">
                 <textarea class="Label-texto" rows="8" required></textarea>
-            </label><label class="Label" for="">
+            </label><label class="Label">
                 <input class="Label-btn" type="submit">
             </label>
 
@@ -264,9 +288,9 @@
 
     </section>
 </body>
-<!----------------------------------------------------------------------
-    Sección principal en la que se observa la primera impresión de la página
-    ----------------------------------------------------------------------->
+<!-----------------------------------------------------------------------
+Footer donde se encuentran las redes sociales y el copyright de la página
+------------------------------------------------------------------------->
 <footer class="Footer">
     <div class="Redes">
         <a class="Redes-f" href="https://www.facebook.com/jesus.murciegoalonso"><i

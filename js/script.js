@@ -111,13 +111,6 @@ let btnPLay = document.querySelector('.Botones-play').addEventListener('click', 
     audio.play()
 }
 )
-//Creamos la función de close que funciona al añadir y remover la clase active
-function close() {
-    let box = document.querySelector('.Box')
-    let inicio = document.querySelector('.Inicio')
-    box.classList.add('active')
-    inicio.classList.add('active')
-} 
 //Hacemos que al darle click al botón se pause el audio
 let btnPause = document.querySelector('.Header-pause').addEventListener('click', () => {
     audio.pause()
@@ -126,3 +119,10 @@ let btnPause = document.querySelector('.Header-pause').addEventListener('click',
 let btnPLayagain = document.querySelector('.Header-play').addEventListener('click', () => {
     audio.play()
 })
+//Creamos la función de close que funciona al añadir y remover la clase active
+function close() {
+    let box = document.querySelector('.Box')
+    let inicio = document.querySelector('.Inicio')
+    box.classList.add('active')
+    inicio.classList.add('active')
+}

@@ -289,7 +289,7 @@ Header y menu
     cursor: pointer;
     border: none;
     top: 120%;
-    animation: glow 2s alternate infinite;
+    animation: glow 1s alternate infinite;
 
 }
 
@@ -755,7 +755,21 @@ Media queries
     .Box {
         width: 80%;
     }
-  
+
+    .Shopping {
+        top: 1rem;
+        right: 3%;
+    }
+
+    .Tienda {
+        width: 95%;
+    }
+
+    .Shop-btn {
+        width: 100%;
+        margin-bottom: 2rem;
+    }
+
     .Header-pause,
     .Header-play {
         top: 25%;
@@ -906,6 +920,10 @@ Media queries
 
     .Box {
         width: 50%;
+    }
+
+    .Tienda {
+        width: 75%;
     }
 }
 

@@ -588,9 +588,6 @@ Colores redes
     color: red;
 }
 
-.fa-envelope {
-    color: white;
-}
 
 /*----
 Footer
@@ -602,8 +599,6 @@ Footer
     justify-content: center;
     width: 96%;
 }
-
-
 
 /*-----------
 Animaciones
@@ -926,8 +921,6 @@ Media queries
         width: 75%;
     }
 }
-
-
 
 /*Pc*/
 @media only screen and (min-width: 1025px) {

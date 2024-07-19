@@ -606,6 +606,7 @@ Footer
     animation: glow 2s alternate infinite;
 }
 .Footer-h3{
+    padding: 1rem;
     color: orange;
     
 }

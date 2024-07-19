@@ -19,7 +19,7 @@ Css Principal
 .Containergaleria,
 .Containertrayectoria,
 .Containereventos,
-.Containercontacto {
+.Containercontacto,.Footer {
     display: flex;
     width: 100%;
     flex-direction: column;
@@ -343,8 +343,11 @@ Intro principal con sus redes y efectos
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 40%;
+    height: 50%;
+    width: 60%;
+    border-radius: 15px;
     margin-top: 6rem;
+    background-color: rgba(0, 0, 0, 0.250);
 }
 
 .Logo-h1 {
@@ -355,11 +358,27 @@ Intro principal con sus redes y efectos
 .Redes-f,
 .Redes-i,
 .Redes-y,
-.Redes-e,
 .Redes-t {
     margin: 0.5rem;
+    text-decoration: none;
+    color: white;
+    cursor: pointer;
 }
-
+.Redes-f{
+    color: #008aff;
+}
+.Redes-i{
+    color: rgb(255, 0, 140);
+}
+.Redes-y{
+    color: red;
+}
+.Redes-t{
+    color: white;
+}
+.fa-location-dot{
+    color: cyan;
+}
 /* ---------------------------------
 Fondos transparentes de varias cajas
 ----------------------------------*/
@@ -568,38 +587,29 @@ Css formulario
     animation: boxShadow 2s alternate infinite;
 }
 
-/* ----------
-Colores redes
----------- */
-.fa-facebook-f {
-    color: #004ce4;
-}
-
-.fa-tiktok {
-    color: silver;
-}
-
-
-.fa-instagram {
-    color: darkmagenta;
-}
-
-.fa-youtube {
-    color: red;
-}
-
-
 /*----
 Footer
 -----*/
 .Footer {
-    margin: 1rem;
-    position: absolute;
-    display: flex;
-    justify-content: center;
-    width: 96%;
+    width: 100%;
+    background-image: url(https://images.pexels.com/photos/625644/pexels-photo-625644.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
+.Footer-txt {
+    display: flex;
+    align-items: center;
+
+}
+.Footer-h2{
+    padding: 2rem;
+    animation: glow 2s alternate infinite;
+}
+.Footer-h3{
+    color: orange;
+    
+}
 /*-----------
 Animaciones
 -----------*/

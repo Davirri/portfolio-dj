@@ -79,7 +79,7 @@ btnPrev.addEventListener("click", () => {
 // Agregamos un evento de scroll dierctamente sobre la ventana del navegador 
 window.addEventListener('scroll', () => {
     //Creamos la constante mediante queryselector que en este caso usamos el All porque vamos a seleccionar varios elementos
-    const container = document.querySelectorAll('.Container-p,.Container-h2,.Container-h1,.Container-h3,.Container-form,.Guitarra,.Enlaces-img,.Container-gifleft,.Container-gifright')
+    const container = document.querySelectorAll('.Container-p,.Container-h2,.Container-h1,.Container-h3,.Container-form,.Guitarra,.Enlaces-img,.Container-gifleft,.Container-gifright,.Footer-txt')
     //Creamos un bucle con forEach y nombramos box a cada elemento 
     container.forEach(box => {
         /*Ponemos condicionales que el primero nos dice que la box se vuelva visible en la pantalla cuando entra en el 80% de la altura de la ventana del navegador

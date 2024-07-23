@@ -602,6 +602,7 @@ Footer
 
 }
 .Footer-h2{
+    padding: 0.6rem;
     animation: glow 2s alternate infinite;
 }
 .Footer-h3{

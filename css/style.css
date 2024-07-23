@@ -602,11 +602,9 @@ Footer
 
 }
 .Footer-h2{
-    padding: 2rem;
     animation: glow 2s alternate infinite;
 }
 .Footer-h3{
-    padding: 1rem;
     color: orange;
     
 }

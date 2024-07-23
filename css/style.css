@@ -594,20 +594,24 @@ Footer
     background-image: url(https://images.pexels.com/photos/625644/pexels-photo-625644.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
     background-repeat: no-repeat;
     background-size: cover;
+
 }
 
 .Footer-txt {
     display: flex;
     align-items: center;
+    justify-content: space-between;
 
 }
 .Footer-h2{
-    padding: 0.6rem;
     animation: glow 2s alternate infinite;
+    margin: 0.6rem;
+
 }
 .Footer-h3{
     color: orange;
-    
+    margin: 0.6rem;
+
 }
 /*-----------
 Animaciones
